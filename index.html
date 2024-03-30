@@ -1,0 +1,123 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title> Portfolio Website</title>
+</head>    
+<body>
+    <header class="header">
+        <a href="#" class="logo"> Portfolio</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+     <section class="home" id="home">
+        <div class="home-content" style="display: flex;">
+            <div style="width: 75%;">
+                <h3> Hello,I am</h3>
+                <h1>Kritika Negi</h1>
+                <h3>a <span>B.tech Student</span> </h3>
+                <a href="Kritika_negi.pdf" class="btn"> Download CV</a>
+            </div>
+            <div>
+                <img src="photo.jpg" style="width: 40%; margin-left: 200px; height: 400px; width: 400px; border-radius: 55%;">
+            </div>
+        </div>
+        <div class="home-img">
+            <img src="">
+
+        </div>
+     </section>
+     <section class="about"id="about">
+        <div class="about-img">
+            <img src="photo.jpg" style="width: 45%; margin-left: 400px; height: 400px; width: 400px; border-radius: 55%;">
+        </div>
+        <div class="about-content">
+            <h2 class="heading"> ABOUT<span> Me</span></h2>
+            <h3>Software Developer </h3>
+            <pre> Hello! I'm Kritika Negi, a passionate BTech IT student with a keen interest in leveraging technology to solve real-world problems.
+                 Currently pursuing my degree in Banasthali Vidyapith, I'm dedicated to honing my skills in software development.
+
+                 Throughout my academic journey, I've immersed myself in various projects, from developing interactive web applications
+                  to exploring the intricacies of data structures and algorithms.
+                  I'm committed to continuous learning and staying updated with the latest advancements in IT to remain at the forefront of the industry.
+
+                  With a blend of technical expertise, creativity, and a problem-solving mindset, I'm excited to contribute to cutting-edge projects that
+                   push the boundaries of technology. I am eager to explore opportunities where I can apply my skills to make a meaningful impact and contribute 
+                   to the ever-evolving field of IT.</pre>
+        </div>
+     </section>
+     <section class="portfolio" id="portfolio">
+        <h2 class="heading"> Latest<span>Projects</span></h2>
+         <br>
+        <div class="container black">
+            <div class="d1"><img src="img.png" style=" width:400px; height: 400px; border-radius: 55%">
+            <span style="z-index: 10;"><button class="btn"><a href=" https://kritikanegi24.github.io/website1/" target="_blank">OPEN PROJECT</a></button></span></div><br>
+            <div class="d1"><br>
+            <span style="z-index: 10;"><button class="btn"><a href="https://github.com/KritikaNegi24/iwtassignments" target="_blank">OPEN ASSIGNMENTS</a></button></span></div><br><br><br>
+    </div>
+    <div></div>
+     </section>
+    
+     <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="#" id="contactForm">
+            <div class="input-box">
+                <input type="text" id="fullName" placeholder="Full Name">
+                <input type="email" id="email" placeholder="Email Name">
+            </div>
+            <div class="input-box">
+                <input type="tel" id="mobileNumber" placeholder="Mobile Number">
+                <input type="text" id="emailSubject" placeholder="Email Subject">
+            </div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+        
+        <script>
+            // Get the form element
+            const form = document.getElementById('contactForm');
+        
+            // Add event listener for form submission
+            form.addEventListener('submit', function(event) {
+                // Prevent the default form submission
+                event.preventDefault();
+        
+                // Get form input values
+                const fullName = document.getElementById('fullName').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const mobileNumber = document.getElementById('mobileNumber').value.trim();
+                const emailSubject = document.getElementById('emailSubject').value.trim();
+                const message = document.getElementById('message').value.trim();
+        
+                // Basic validation
+                if (fullName === '' || email === '' || mobileNumber === '' || emailSubject === '' || message === '') {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+        
+                // Validate email format
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+        
+                // Validate mobile number format
+                const mobileRegex = /^\d{10}$/;
+                if (!mobileRegex.test(mobileNumber)) {
+                    alert('Please enter a valid 10-digit mobile number.');
+                    return;
+                }
+            });
+        </script>
+     </section>
+     <script src="JS/main.js"></script>
+</body>
+</html>
